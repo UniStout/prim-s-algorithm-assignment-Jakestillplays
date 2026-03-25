@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
 
 // Input file example:
@@ -10,3 +12,9 @@ using namespace std;
 // 0 2 6
 // ------------------
 
+std::ifstream inputFile("Input.txt");
+if (!inputFile) {
+    std::cerr << "Error: Unable to open the file." << std::endl;
+    // Handle error (e.g., exit the program)
+    return 1;
+}
